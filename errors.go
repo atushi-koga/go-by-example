@@ -52,7 +52,7 @@ func main() {
 	// 型アサーションを使って取得する
 	_, e3 := f2(42)
 	// fmt.Println(e3.arg)	// e3.arg undefined (type error has no field or method arg)
-	//fmt.Println(e3.prob)  // e3.prob undefined (type error has no field or method prob)
+	// fmt.Println(e3.prob)  // e3.prob undefined (type error has no field or method prob)
 
 	// 型アサーションは <変数>.(<型>) の構文となる
 	// 返り値の1番目は型アサーション成功時の実際の値、2番目は成功の有無(true/false)
