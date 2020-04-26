@@ -49,8 +49,8 @@ func main() {
 	fmt.Println(f >= 0) // true
 	//fmt.Println(c == f)          // コンパイルエラー：型不一致
 	fmt.Println(c == Celsius(f)) // true
-
 	// 名前付き型は、その型の値に対して新たな振る舞いを定義できる
+
 	fmt.Println(FreezingC.toF())
 	fmt.Println(FreezingC) // Stringメソッドを明示的に呼び出さなくて良い
 }
