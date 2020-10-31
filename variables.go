@@ -23,7 +23,7 @@ func main(){
 	f := "short"
 	fmt.Println(f)	// short
 
-	// 上の省略記法は以下と同じ
+	// 上の省略記法は以下と同じ。これは冗長になるので、型を省略するのが一般的。
 	var g string = "long"
 	fmt.Println(g)	// long
 }
