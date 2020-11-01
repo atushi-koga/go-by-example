@@ -4,7 +4,7 @@ import "fmt"
 
 // 関数宣言
 // 引数、返り値に型を指定する
-func plus (a int, b int) int {
+func plus(a int, b int) int {
 	return a + b
 }
 
@@ -13,10 +13,15 @@ func plusPlus(a, b, c int) int {
 	return a + b + c
 }
 
+// 返り値がない場合は、返り値の型宣言は書かない。(PHPで言うvoidは存在しない)
+func printFmt(v int) {
+	fmt.Println(v)
+}
+
 func main() {
 	res := plus(1, 2)
-	fmt.Println(res)
+	printFmt(res)
 
 	res2 := plusPlus(1, 2, 3)
-	fmt.Println(res2)
+	printFmt(res2)
 }
