@@ -30,5 +30,19 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+
+	var cards []string
+	cardsSuits := []string{"Spades", "Clubs", "Diamonds", "Hearts"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
+
+	// forループ中のrangeは、スライスもしくはマップを反復処理する
+	// スライスの場合は、各繰り返しに対して2つの値が返される。1つ目はインデックスで、2つ目はそのインデックスの要素のコピー。
+	// '_' で使用しないパラメータを明示
+	for _, suit := range cardsSuits {
+		for _, value := range cardValues {
+			cards = append(cards, suit+" of "+value)
+		}
+	}
+	fmt.Println(cards)
 }
 
