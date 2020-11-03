@@ -38,7 +38,7 @@ func main(){
 	copy(c, s)
 	fmt.Println("copy:", c)
 
-	// スライスのスライス
+	// スライスの一部を抽出。s[startIndexIncluding : upToIndexNotIncluding]
 	l1 := s[2:5]		// s[2],s[3],s[4]から成るスライス
 	fmt.Println("slice2~4:", l1)
 
