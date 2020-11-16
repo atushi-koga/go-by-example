@@ -13,11 +13,11 @@ func main(){
 	fmt.Println(b, c)	// 1 2
 
 	// 明示的に初期化していない変数の値はその型のゼロ値
-	var d bool
-	fmt.Println(d)	// false
-
-	var e int
-	fmt.Println(e)	// 0
+	var d1 bool
+	var d2 string
+	var d3 int
+	var d4 float64
+	fmt.Printf("%v, %v, %v, %v", d1, d2, d3, d4) // false, "", 0, 0
 
 	// 宣言と初期化を行う省略記法
 	f := "short"
