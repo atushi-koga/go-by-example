@@ -55,17 +55,25 @@ func main() {
 	fmt.Println("value:", v)  // ゼロ値
 	fmt.Println("is ok:", ok) // false
 
+	// map は宣言だけだと初期化されずnilになる。nilマップへ保存しようとするとパニックになる。
 	var nilMap map[string]int
 	fmt.Println("nilMap equal nil:", nilMap == nil)
 	fmt.Println("nilMap is 0 length:", len(nilMap) == 0)
-	//nilMap["error"] = 500	// nilマップへ保存しようとするとパニックになる。マップに保存する前にマップを割り当てなければならない
+	//nilMap["error"] = 500	// panic
 	fmt.Println(nilMap)
 
-	notNilMap := make(map[string]int)
-	fmt.Println("notNilMap equal nil:", notNilMap == nil)
-	fmt.Println("notNilMap is 0 length:", len(notNilMap) == 0)
-	notNilMap["ok"] = 200 // マップが割り当てられているのでパニックにはならない
-	fmt.Println(notNilMap)
+	// makeを使うか、空マップを宣言すれば nilマップにならず、割り当てることができる。
+	notNilMap1 := make(map[string]int)
+	fmt.Println("notNilMap1 equal nil:", notNilMap1 == nil)
+	fmt.Println("notNilMap1 is 0 length:", len(notNilMap1) == 0)
+	notNilMap1["ok1"] = 200 // マップが割り当てられているのでパニックにはならない
+	fmt.Println(notNilMap1)
+
+	notNilMap2 := map[string]int{}
+	fmt.Println("notNilMap2 equal nil:", notNilMap2 == nil)
+	fmt.Println("notNilMap2 is 0 length:", len(notNilMap2) == 0)
+	notNilMap2["ok2"] = 201 // マップが割り当てられているのでパニックにはならない
+	fmt.Println(notNilMap2)
 
 	// mapのソート
 	// マップの繰り返し順序は定義されておらず、実行ごとに変化する。
