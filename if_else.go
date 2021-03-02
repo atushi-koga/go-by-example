@@ -4,27 +4,29 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	// 基本的な例
-	if 7 % 2 == 0{
+	if 7%2 == 0 {
 		fmt.Println("7 is even")
-	}else{
+	} else {
 		fmt.Println("7 is odd")
 	}
 
 	// elseがなくても良い
-	if 8 % 4 == 0 {
+	if 8%4 == 0 {
 		fmt.Println("8 is divided by 4")
 	}
 
-	// 条件の前に文を書いても良い
-	// この文で宣言された変数は、いずれの分岐からも見えるが、if文から外れると見えなくなる。
-	if num := 9; num < 0 {
-		fmt.Println(num, "is negative")
-	}else if num < 10 {
-		fmt.Println(num, "has 1 digit")
-	}else{
-		fmt.Println(num, "has multiple digit")
+	// 簡易ステートメント
+	// 条件式の前に、簡易なステートメントを記述できる。この場合、セミコロンで区切って条件式の前に記述します。
+	// 簡易ステートメントで宣言された変数は、ifのスコープ内でのみ有効（いずれの分岐からも見える）だが、if文から外れると見えなくなる。
+	i := 5
+	if i := 20; i < 0 {
+		fmt.Println(i, "is negative")
+	} else if i < 10 {
+		fmt.Println(i, "is smaller than 10")
+	} else {
+		fmt.Println(i, "is larger than 10")
 	}
-	//fmt.Println(num)		// undefined: num
+	fmt.Println(i) // 5
 }
