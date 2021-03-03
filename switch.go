@@ -39,6 +39,34 @@ func main(){
 		fmt.Println("after noon")
 	}
 
+	// fall through はされないのが基本
+	j := 15
+	switch {
+	case j < 10:
+		fmt.Println("j is less than 10")
+	case j < 20:
+		fmt.Println("j is less than 20")  // これだけ表示される
+	case j < 30:
+		fmt.Println("j is less than 30")
+	default:
+		fmt.Println("j is over 30")
+	}
+
+	// 推奨されないと思うが、fall through する場合は明示的に記述する
+	// そうすると、次のcase文を条件判定なしで実行する
+	k := 15
+	switch {
+	case k < 10:
+		fmt.Println("k is less than 10")
+	case k < 20:
+		fmt.Println("k is less than 20")
+		fallthrough
+	case k > 100:
+		fmt.Println("30 < k 100")
+	default:
+		fmt.Println("k is over 30")
+	}
+
 	// switchは値だけでなく型について分岐することもできる
 	// これを使ってinterfaceの型を調べることができる
 	whatAmI := func(i interface{}){
