@@ -23,3 +23,11 @@ func Sample5() int {
 func sample6() int {
 	return 6
 }
+
+func Sample7() int {
+	return 7
+}
+
+func sample8() int {
+	return 8
+}
