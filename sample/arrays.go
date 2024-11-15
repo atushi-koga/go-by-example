@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	// 配列の宣言。要素数と型を指定する
 	// 配列を宣言すると要素の値は型のゼロ値になる
 	var array1 [5]int

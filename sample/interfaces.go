@@ -14,10 +14,10 @@ type geometry interface {
 
 // rectangular型とcircle型でgeometryインターフェースを実装する
 // Goのインターフェースを実装するには、インターフェースに含まれるメソッドを全て実装すれば良い
-type rectangular struct{
+type rectangular struct {
 	width, height float64
 }
-type circle struct{
+type circle struct {
 	radius float64
 }
 
@@ -26,7 +26,7 @@ func (r rectangular) area() float64 {
 	return r.width * r.height
 }
 func (r rectangular) perimeter() float64 {
-	return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
 }
 
 // circle型でgeometryインターフェースを実装する
@@ -46,8 +46,8 @@ func measure(g geometry) {
 }
 
 func main() {
-	r := rectangular{width:3, height:4}
-	c := circle{radius:5}
+	r := rectangular{width: 3, height: 4}
+	c := circle{radius: 5}
 	measure(r)
 	measure(c)
 }

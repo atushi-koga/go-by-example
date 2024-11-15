@@ -13,7 +13,7 @@ func (p *Point) ScaleBy(factor float64) {
 }
 
 func (p Point) Distance(q Point) float64 {
-	return math.Hypot(q.X - p.X, q.Y - p.Y)
+	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
 
 func main() {
@@ -23,25 +23,25 @@ func main() {
 	p1 := Point{1, 2}
 	pptr := &p1
 	pptr.ScaleBy(2)
-	fmt.Println("p1_1", p1)	// {2, 4}
-	fmt.Println("p1_2", *pptr)	// アドレスの解決
+	fmt.Println("p1_1", p1)    // {2, 4}
+	fmt.Println("p1_2", *pptr) // アドレスの解決
 
 	// ポインタレシーバの提供2
 	r := &Point{1, 2}
 	r.ScaleBy(2)
-	fmt.Println("p2", *r)	// {2, 4}
+	fmt.Println("p2", *r) // {2, 4}
 
 	// ポインタレシーバの提供3
 	p3 := Point{1, 2}
 	(&p3).ScaleBy(2)
-	fmt.Println("p3", p3)	// {2, 4}
+	fmt.Println("p3", p3) // {2, 4}
 
 	// ポインタレシーバの提供4
 	// *Pointレシーバを要求する場合でも、Point型の変数を渡せばコンパイラが暗黙的にポインタ型に変換する（アドレス化可能なため）
 	p4 := Point{1, 2}
 	p4.ScaleBy(2)
-	(&p4).ScaleBy(2)	// 上記と同じ
-	fmt.Println("p4", p4)	// {4, 8}
+	(&p4).ScaleBy(2)      // 上記と同じ
+	fmt.Println("p4", p4) // {4, 8}
 
 	// 逆に、Point型を要求する場合でも、*Pointレシーバでメソッドを呼び出すことができる （アドレスから値を得られるため）
 	// つまり、レシーバが指している値をロードする
@@ -49,5 +49,5 @@ func main() {
 	p5 := Point{1, 2}
 	p6ptr := &Point{3, 4}
 	fmt.Println("p5_1", p6ptr.Distance(p5))
-	fmt.Println("p5_2", (*p6ptr).Distance(p5))	// 上記と同じ
+	fmt.Println("p5_2", (*p6ptr).Distance(p5)) // 上記と同じ
 }
