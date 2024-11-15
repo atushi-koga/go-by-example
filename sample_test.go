@@ -22,3 +22,10 @@ func TestSample7(t *testing.T) {
 		t.Errorf("Sample3() = %v, want 3", got)
 	}
 }
+
+func TestSample8(t *testing.T) {
+	got := sample8()
+	if got != 8 {
+		t.Errorf("Sample8() = %v, want 8", got)
+	}
+}
