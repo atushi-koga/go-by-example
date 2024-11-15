@@ -15,3 +15,11 @@ func Sample3() int {
 func sample4() int {
 	return 4
 }
+
+func Sample5() int {
+	return 5
+}
+
+func sample6() int {
+	return 6
+}
