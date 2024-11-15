@@ -1,4 +1,4 @@
-package sample
+package go_by_example
 
 func Sample1() int {
 	return 1

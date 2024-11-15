@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	// スライスの宣言1
 	var s1 []string
 	fmt.Println("declare1:", s1)
@@ -39,24 +39,24 @@ func main(){
 	fmt.Println("copy:", c)
 
 	// スライスの一部を抽出。s[startIndexIncluding : upToIndexNotIncluding]
-	l1 := s[2:5]		// s[2],s[3],s[4]から成るスライス
+	l1 := s[2:5] // s[2],s[3],s[4]から成るスライス
 	fmt.Println("slice2~4:", l1)
 
 	// スライスのインデックス指定の省略
-	l2 := s[:5]		// s[0]からs[4]で成るスライス
+	l2 := s[:5] // s[0]からs[4]で成るスライス
 	fmt.Println("slice0~4:", l2)
 
-	l3 := s[2:]    // s[2]からs[len(s)]で成るスライス
+	l3 := s[2:] // s[2]からs[len(s)]で成るスライス
 	fmt.Println("slice2~len(s):", l3)
 
-	l4 := s[:]    // 全要素から成るスライス
+	l4 := s[:] // 全要素から成るスライス
 	fmt.Println("slice all:", l4)
 
 	// スライスを組み合わせて多次元のデータ構造を作れる
 	// 内側の配列の長さは要素によって異なっていても構わない。（配列の場合は、同じでなければならない）
 	sd := make([][]int, 3)
-	fmt.Println("first dimension:", len(sd))	// 1次元目のスライス長は3
-	fmt.Println("now second dimension:", len(sd[0]))	// まだ2次元目のスライス長は0
+	fmt.Println("first dimension:", len(sd))         // 1次元目のスライス長は3
+	fmt.Println("now second dimension:", len(sd[0])) // まだ2次元目のスライス長は0
 	for i := 0; i < 3; i++ {
 		innerLength := i + 1
 		// 2次元目のスライス長を設定し値を入れる

@@ -16,9 +16,10 @@ func f1(arg int) (int, error) {
 // Errorメソッドを実装すれば、自分で作った型をerrorとして扱える(errorインターフェースを満たすため)
 // エラーが引数エラーであることを明示する型を作る
 type argError struct {
-	arg int
+	arg  int
 	prob string
 }
+
 func (e argError) Error() string {
 	return fmt.Sprintf("%d - %s", e.arg, e.prob)
 }
@@ -34,14 +35,14 @@ func main() {
 	for _, i := range []int{2, 42} {
 		if r, e := f1(i); e != nil {
 			fmt.Println("f1 failed", e)
-		}else{
+		} else {
 			fmt.Println("f1 work", r)
 		}
 	}
 	for _, i2 := range []int{2, 42} {
 		if r2, e2 := f2(i2); e2 != nil {
 			fmt.Println("f2 failed", e2)
-		}else{
+		} else {
 			fmt.Println("f2 work", r2)
 		}
 	}

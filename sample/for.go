@@ -25,7 +25,7 @@ func main() {
 
 	// `continue` と書くと、ループ内の次の繰り返しに進む。
 	for n := 0; n <= 5; n++ {
-		if n % 2 == 0 {
+		if n%2 == 0 {
 			continue
 		}
 		fmt.Println(n)
@@ -45,4 +45,3 @@ func main() {
 	}
 	fmt.Println(cards)
 }
-

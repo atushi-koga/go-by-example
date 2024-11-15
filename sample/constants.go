@@ -76,7 +76,7 @@ func main() {
 
 	// YiBとZiBの値は大きすぎてどのような整数変数へも保存できないが、次のような式で使える正当な定数
 	//yib := 1208925819614629174706176	// overflows int
-	fmt.Println(YiB / ZiB)	// 1024
+	fmt.Println(YiB / ZiB) // 1024
 
 	// 変換を必要とせずに使える
 	var x float32 = math.Pi

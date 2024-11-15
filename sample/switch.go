@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main(){
+func main() {
 	// 基本的な使い方
 	// 定数で値を比較する。caseには式（i > 0 など）を設定できない。
 	i := 2
@@ -45,7 +45,7 @@ func main(){
 	case j < 10:
 		fmt.Println("j is less than 10")
 	case j < 20:
-		fmt.Println("j is less than 20")  // これだけ表示される
+		fmt.Println("j is less than 20") // これだけ表示される
 	case j < 30:
 		fmt.Println("j is less than 30")
 	default:
@@ -69,7 +69,7 @@ func main(){
 
 	// switchは値だけでなく型について分岐することもできる
 	// これを使ってinterfaceの型を調べることができる
-	whatAmI := func(i interface{}){
+	whatAmI := func(i interface{}) {
 		switch x := i.(type) {
 		case bool:
 			fmt.Println("type bool")

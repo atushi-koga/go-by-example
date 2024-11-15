@@ -1,4 +1,4 @@
-package sample
+package go_by_example
 
 import "testing"
 
